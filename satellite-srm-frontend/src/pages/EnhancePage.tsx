@@ -278,7 +278,7 @@ export const EnhancePage: React.FC = () => {
                 <h4 className="font-bold text-primary text-sm">TerraSR backend is unavailable</h4>
                 <p className="text-xs text-amber-700 dark:text-amber-400/90 leading-relaxed">
                   Please make sure the TerraSR FastAPI backend is running and try again.<br />
-                  Backend endpoint: <code className="bg-white/50 dark:bg-slate-900/50 px-1.5 py-0.5 rounded text-amber-800 dark:text-amber-500 font-mono border border-amber-500/20">http://localhost:8000</code>
+                  Backend endpoint: <code className="bg-white/50 dark:bg-slate-900/50 px-1.5 py-0.5 rounded text-amber-800 dark:text-amber-500 font-mono border border-amber-500/20">{getApiBaseUrl() || 'http://localhost:8000'}</code>
                 </p>
                 <button
                   onClick={checkHealth}

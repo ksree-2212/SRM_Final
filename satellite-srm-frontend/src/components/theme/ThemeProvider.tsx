@@ -27,7 +27,7 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const theme: Theme = "dark";
-  const setTheme = () => {};
+  const setTheme = (theme: Theme) => {};
 
   useEffect(() => {
     const root = window.document.documentElement;

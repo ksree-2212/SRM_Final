@@ -6,7 +6,7 @@
     "build": "npm --prefix satellite-srm-frontend run build",
     "dev:frontend": "npm --prefix satellite-srm-frontend run dev",
     "start": "python run.py",
-    "start:backend": "python satellite-srm-backend/server.py",
+    "start:backend": "python real-backend/Satellite_SRM_DL/server.py",
     "start:reload": "python run.py --reload"
   },
   "private": true

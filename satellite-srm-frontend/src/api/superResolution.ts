@@ -1,4 +1,4 @@
-import { apiClient } from './client';
+import { apiClient, resolveApiUrl } from './client';
 import { ProcessingJob } from '../types/satellite';
 
 export interface StartReconstructionParams {
@@ -68,7 +68,8 @@ export async function startSuperResolution(
 
 export async function checkBackendHealth(): Promise<boolean> {
   try {
-    const res = await fetch('/api/v1/health');
+    const url = resolveApiUrl('/api/v1/health');
+    const res = await fetch(url);
     if (!res.ok) return false;
     
     const contentType = res.headers.get('content-type');

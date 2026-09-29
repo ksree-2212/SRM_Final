@@ -18,7 +18,7 @@ const IntroAnimation: React.FC<{ onFinished: () => void }> = ({ onFinished }) =>
 
   useFrame(() => {
     // Zoom in smoother from a less extreme distance
-    const targetPos = new THREE.Vector3(-0.8, 0.2, 2.8);
+    const targetPos = new THREE.Vector3(-1.2, 0.5, 4.0);
     camera.position.lerp(targetPos, 0.015);
     camera.lookAt(0, 0, 0);
 

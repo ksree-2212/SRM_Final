@@ -1,0 +1,19 @@
+{
+  "patch_id": "S2A_MSIL2A_TEST_REAL_DL_01_p_0_0",
+  "scene_id": "S2A_MSIL2A_TEST_REAL_DL_01",
+  "aoi_name": "test_aoi",
+  "col_off": 0,
+  "row_off": 0,
+  "lr_size": 64,
+  "hr_size": 192,
+  "scale_factor": 3.0,
+  "lr_gsd": 0.0003906249999999986,
+  "hr_gsd": 0.0003906249999999986,
+  "crs": "EPSG:4326",
+  "bounds": [
+    13.4,
+    52.575,
+    13.425,
+    52.6
+  ]
+}

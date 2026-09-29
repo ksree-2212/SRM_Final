@@ -1,0 +1,17 @@
+{
+  "scene_id": "S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317",
+  "sensor": "Sentinel-2",
+  "product": "L2A",
+  "acquisition_date": "2026-09-18",
+  "cloud_cover": 0.0,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "crs": "EPSG:32643",
+  "source": "Copernicus Data Space Ecosystem",
+  "checksum": "729c9520940a9413906b1be2dbbd9e0077de1e4295ba4814533300a1dd6af509",
+  "file_path": "C:\\Users\\vemul\\OneDrive\\Desktop\\sih\\Satellite_SRM_DL\\data\\raw\\sentinel2\\S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317.tif"
+}

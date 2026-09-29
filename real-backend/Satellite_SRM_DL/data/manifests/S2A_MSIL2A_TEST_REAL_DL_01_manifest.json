@@ -1,0 +1,17 @@
+{
+  "scene_id": "S2A_MSIL2A_TEST_REAL_DL_01",
+  "sensor": "Sentinel-2",
+  "product": "L2A",
+  "acquisition_date": "2026-05-15",
+  "cloud_cover": 2.5,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "crs": "EPSG:4326",
+  "source": "Copernicus Data Space Ecosystem / Calibrated Sentinel-2",
+  "checksum": "445c5dd28953522500776cc1d6b40258ec57ad0e9dcde817e437f78b2ccd66bf",
+  "file_path": "data/raw/sentinel2\\S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715.tif"
+}

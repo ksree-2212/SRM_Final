@@ -1,0 +1,143 @@
+"""Copernicus Data Space Ecosystem (CDSE) client authentication and catalog query."""
+import os
+import requests
+from typing import Optional, Dict, Any, List
+from satellite_srm.logging_config import get_logger
+
+logger = get_logger("copernicus")
+
+class CopernicusClient:
+    """Authenticates with CDSE Keycloak and queries the OData product catalogue."""
+
+    def __init__(self, username: Optional[str] = None, password: Optional[str] = None,
+                 client_id: Optional[str] = None, client_secret: Optional[str] = None):
+        self.username = username or os.environ.get("CDSE_USERNAME")
+        self.password = password or os.environ.get("CDSE_PASSWORD")
+        self.client_id = client_id or os.environ.get("CDSE_CLIENT_ID")
+        self.client_secret = client_secret or os.environ.get("CDSE_CLIENT_SECRET")
+        self.token_url = "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token"
+        self.odata_url = "https://catalogue.dataspace.copernicus.eu/odata/v1/Products"
+        self._access_token: Optional[str] = None
+
+    def authenticate(self) -> bool:
+        if not (self.username and self.password) and not (self.client_id and self.client_secret):
+            logger.info("CDSE credentials not configured in environment (CDSE_USERNAME/CDSE_PASSWORD).")
+            return False
+
+        payload = {"grant_type": "password", "client_id": "cdse-public"}
+        if self.username and self.password:
+            payload.update({"username": self.username, "password": self.password})
+        elif self.client_id and self.client_secret:
+            payload.update({
+                "grant_type": "client_credentials",
+                "client_id": self.client_id,
+                "client_secret": self.client_secret
+            })
+
+        try:
+            resp = requests.post(self.token_url, data=payload, timeout=15)
+            if resp.status_code == 200:
+                self._access_token = resp.json().get("access_token")
+                logger.info("Authenticated successfully with Copernicus Data Space Ecosystem.")
+                return True
+            else:
+                logger.warning(f"Authentication failed: HTTP {resp.status_code} - {resp.text}")
+                return False
+        except Exception as e:
+            logger.warning(f"Error connecting to CDSE token endpoint: {e}")
+            return False
+
+    def search_scenes(
+        self,
+        bbox: List[float],
+        start_date: str,
+        end_date: str,
+        max_cloud_cover: float = 15.0
+    ) -> List[Dict[str, Any]]:
+        """
+        Searches Sentinel-2 L2A scenes by AOI bbox [min_lon, min_lat, max_lon, max_lat] and date range.
+        """
+        min_lon, min_lat, max_lon, max_lat = bbox
+        poly_str = f"POLYGON(({min_lon} {min_lat}, {max_lon} {min_lat}, {max_lon} {max_lat}, {min_lon} {max_lat}, {min_lon} {min_lat}))"
+        filter_query = (
+            f"Collection/Name eq 'SENTINEL-2' and "
+            f"Attributes/OData.CSC.StringAttribute/any(att:att/Name eq 'productType' and att/OData.CSC.StringAttribute/Value eq 'S2MSI2A') and "
+            f"OData.CSC.Intersects(area=geography'SRID=4326;{poly_str}') and "
+            f"ContentDate/Start gt {start_date}T00:00:00.000Z and "
+            f"ContentDate/Start lt {end_date}T23:59:59.999Z and "
+            f"Attributes/OData.CSC.DoubleAttribute/any(att:att/Name eq 'cloudCover' and att/OData.CSC.DoubleAttribute/Value le {max_cloud_cover})"
+        )
+        url = f"{self.odata_url}?$filter={filter_query}&$top=10&$orderby=ContentDate/Start desc"
+        try:
+            resp = requests.get(url, timeout=60)
+            if resp.status_code == 200:
+                return resp.json().get("value", [])
+            logger.warning(f"CDSE search returned HTTP {resp.status_code}")
+            return []
+        except Exception as e:
+            logger.warning(f"CDSE search request error: {e}")
+            return []
+
+    def download_product(self, product_id: str, output_path: str) -> bool:
+        """
+        Downloads a product ZIP archive from CDSE with resume and retry support.
+        Uses HTTP Range headers to continue interrupted downloads.
+        Retries up to 5 times with exponential backoff.
+        """
+        if not self._access_token:
+            logger.warning("Cannot download: not authenticated.")
+            return False
+
+        download_url = f"https://zipper.dataspace.copernicus.eu/odata/v1/Products({product_id})/$value"
+        headers = {"Authorization": f"Bearer {self._access_token}"}
+
+        max_retries = 5
+        chunk_size = 4 * 1024 * 1024  # 4 MB chunks
+
+        for attempt in range(1, max_retries + 1):
+            # Determine resume offset
+            resume_offset = os.path.getsize(output_path) if os.path.exists(output_path) else 0
+            if resume_offset > 0:
+                logger.info(f"Resuming download from byte {resume_offset:,} (attempt {attempt}/{max_retries})...")
+                headers["Range"] = f"bytes={resume_offset}-"
+            else:
+                logger.info(f"Initiating download for product {product_id} (attempt {attempt}/{max_retries})...")
+                headers.pop("Range", None)
+
+            try:
+                with requests.get(download_url, headers=headers, stream=True, timeout=(30, 300)) as r:
+                    # 206 = Partial Content (resume), 200 = full download
+                    if r.status_code == 416:
+                        # Range not satisfiable – file already complete
+                        logger.info("File already fully downloaded (server returned 416).")
+                        return True
+                    r.raise_for_status()
+
+                    total = int(r.headers.get("Content-Length", 0)) + resume_offset
+                    downloaded = resume_offset
+                    mode = "ab" if resume_offset > 0 else "wb"
+
+                    with open(output_path, mode) as f:
+                        for chunk in r.iter_content(chunk_size=chunk_size):
+                            if chunk:
+                                f.write(chunk)
+                                downloaded += len(chunk)
+                                if total > 0:
+                                    pct = downloaded / total * 100
+                                    if downloaded % (50 * 1024 * 1024) < chunk_size:  # log every ~50 MB
+                                        logger.info(f"  Downloaded {downloaded/1e6:.0f} MB / {total/1e6:.0f} MB ({pct:.1f}%)")
+
+                logger.info(f"Successfully downloaded product {product_id} to {output_path}")
+                return True
+
+            except Exception as e:
+                wait = 2 ** attempt  # 2, 4, 8, 16, 32 seconds
+                logger.warning(f"Download attempt {attempt}/{max_retries} failed: {e}. Retrying in {wait}s...")
+                import time
+                time.sleep(wait)
+
+        logger.error(f"All {max_retries} download attempts failed for product {product_id}.")
+        if os.path.exists(output_path):
+            os.remove(output_path)
+        return False
+

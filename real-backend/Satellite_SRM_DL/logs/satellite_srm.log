@@ -1,0 +1,386 @@
+[2026-09-07 15:46:47] [INFO] [satellite_srm.sentinel2.acquire_scene:40] Generating calibrated Sentinel-2 L2A scene: S2A_MSIL2A_20260515_agriculture
+[2026-09-07 15:46:47] [INFO] [satellite_srm.geotiff.write_geotiff:159] GeoTIFF written via TIFF engine to: data/raw/sentinel2/S2A_MSIL2A_20260515_agriculture.tif
+[2026-09-07 15:46:47] [INFO] [satellite_srm.sentinel2.acquire_scene:95] Sentinel-2 scene acquired: data/raw/sentinel2/S2A_MSIL2A_20260515_agriculture.tif (SHA-256: 215bf20acd49...)
+[2026-09-07 15:46:48] [INFO] [satellite_srm.geotiff.write_geotiff:159] GeoTIFF written via TIFF engine to: data/raw/worldstrat/S2A_MSIL2A_20260515_agriculture_HR_proxy.tif
+[2026-09-07 15:46:48] [INFO] [satellite_srm.worldstrat.generate_reference_pair:87] Generated calibrated HR reference proxy: data/raw/worldstrat/S2A_MSIL2A_20260515_agriculture_HR_proxy.tif (Scale: 3.0x, GSD: 3.33m)
+[2026-09-07 15:46:59] [INFO] [satellite_srm.patches.extract_pairs:97] Extracted 9 patch pairs for scene S2A_MSIL2A_20260515_agriculture
+[2026-09-07 15:46:59] [INFO] [satellite_srm.sampler.split:43] Geographic split complete: 6 train, 1 val, 2 test.
+[2026-09-07 15:47:22] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 15:47:40] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 15:47:54] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 15:51:44] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 15:51:44] [INFO] [satellite_srm.inference_pipeline.run:37] Starting Full-Scene SRM Inference on: data/raw/sentinel2/S2A_MSIL2A_20260515_agriculture.tif
+[2026-09-07 15:51:45] [INFO] [satellite_srm.inference_pipeline.run:50] Decomposed scene into 9 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-07 15:57:06] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 15:57:06] [INFO] [satellite_srm.inference_pipeline.run:37] Starting Full-Scene SRM Inference on: data/raw/sentinel2/S2A_MSIL2A_20260515_agriculture.tif
+[2026-09-07 15:57:06] [INFO] [satellite_srm.inference_pipeline.run:50] Decomposed scene into 9 overlapping tiles (Tile: 128, Overlap: 16)
+[2026-09-07 15:58:58] [INFO] [satellite_srm.geotiff.write_geotiff:159] GeoTIFF written via TIFF engine to: outputs/sr/SR_product.tif
+[2026-09-07 15:58:58] [INFO] [satellite_srm.geotiff.write_geotiff:159] GeoTIFF written via TIFF engine to: outputs/uncertainty/uncertainty_map.tif
+[2026-09-07 15:58:58] [INFO] [satellite_srm.inference_pipeline.run:91] Full-Scene inference completed in 112.10s. Sub-4m product: outputs/sr/SR_product.tif
+[2026-09-07 15:59:15] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 16:00:17] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 16:04:19] [INFO] [satellite_srm.sentinel2.acquire_scene:36] Scene S2A_MSIL2A_20260515_agriculture already exists at data/raw/sentinel2/S2A_MSIL2A_20260515_agriculture.tif
+[2026-09-07 16:04:23] [INFO] [satellite_srm.patches.extract_pairs:97] Extracted 9 patch pairs for scene S2A_MSIL2A_20260515_agriculture
+[2026-09-07 16:04:23] [INFO] [satellite_srm.sampler.split:43] Geographic split complete: 6 train, 1 val, 2 test.
+[2026-09-07 16:04:24] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-07 16:04:24] [INFO] [satellite_srm.inference_pipeline.run:37] Starting Full-Scene SRM Inference on: data/raw/sentinel2/S2A_MSIL2A_20260515_agriculture.tif
+[2026-09-07 16:04:24] [INFO] [satellite_srm.inference_pipeline.run:50] Decomposed scene into 9 overlapping tiles (Tile: 128, Overlap: 16)
+[2026-09-07 16:06:20] [INFO] [satellite_srm.geotiff.write_geotiff:159] GeoTIFF written via TIFF engine to: outputs/sr/SR_product.tif
+[2026-09-07 16:06:20] [INFO] [satellite_srm.geotiff.write_geotiff:159] GeoTIFF written via TIFF engine to: outputs/uncertainty/uncertainty_map.tif
+[2026-09-07 16:06:20] [INFO] [satellite_srm.inference_pipeline.run:91] Full-Scene inference completed in 115.73s. Sub-4m product: outputs/sr/SR_product.tif
+[2026-09-07 16:06:20] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-20 12:25:43] [INFO] [satellite_srm.copernicus.authenticate:24] CDSE credentials not configured in environment (CDSE_USERNAME/CDSE_PASSWORD).
+[2026-09-20 12:25:43] [INFO] [satellite_srm.sentinel2.acquire_scene:120] Generating calibrated Sentinel-2 L2A scene: S2A_MSIL2A_TEST_RUN
+[2026-09-20 12:25:43] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: data/raw/sentinel2\S2A_MSIL2A_TEST_RUN.tif
+[2026-09-20 12:25:43] [INFO] [satellite_srm.sentinel2.acquire_scene:175] Sentinel-2 scene acquired: data/raw/sentinel2\S2A_MSIL2A_TEST_RUN.tif (SHA-256: 9e05a5238de4...)
+[2026-09-20 12:26:22] [INFO] [satellite_srm.sentinel2.acquire_scene:36] Scene S2A_MSIL2A_TEST_RUN already exists at data/raw/sentinel2\S2A_MSIL2A_TEST_RUN.tif
+[2026-09-20 12:26:22] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-20 12:26:22] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-20 12:26:22] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: data/raw/sentinel2\S2A_MSIL2A_TEST_RUN.tif
+[2026-09-20 12:26:22] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 64, Overlap: 16)
+[2026-09-20 12:26:32] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: outputs/sr/TEST_SR_product.tif
+[2026-09-20 12:26:33] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: outputs/sr/TEST_SR_uncertainty.tif
+[2026-09-20 12:26:33] [INFO] [satellite_srm.inference_pipeline.run:94] Full-Scene inference completed in 10.55s. Sub-4m product: outputs/sr/TEST_SR_product.tif
+[2026-09-20 12:28:26] [INFO] [satellite_srm.copernicus.authenticate:41] Authenticated successfully with Copernicus Data Space Ecosystem.
+[2026-09-20 12:28:43] [INFO] [satellite_srm.sentinel2.acquire_scene:59] Downloading real scene S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715...
+[2026-09-20 12:28:43] [INFO] [satellite_srm.copernicus.download_product:93] Initiating download for product 060cd830-fb58-45e1-aa7a-6448072c28db...
+[2026-09-20 12:29:28] [ERROR] [satellite_srm.copernicus.download_product:102] Failed to download product 060cd830-fb58-45e1-aa7a-6448072c28db: HTTPSConnectionPool(host='zipper.dataspace.copernicus.eu', port=443): Read timed out.
+[2026-09-20 12:29:28] [INFO] [satellite_srm.sentinel2.acquire_scene:120] Generating calibrated Sentinel-2 L2A scene: S2A_MSIL2A_TEST_REAL_DL_01
+[2026-09-20 12:29:28] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: data/raw/sentinel2\S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715.tif
+[2026-09-20 12:29:28] [INFO] [satellite_srm.sentinel2.acquire_scene:175] Sentinel-2 scene acquired: data/raw/sentinel2\S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715.tif (SHA-256: 445c5dd28953...)
+[2026-09-20 12:29:28] [INFO] [satellite_srm.patches.extract_pairs:97] Extracted 1 patch pairs for scene S2A_MSIL2A_TEST_REAL_DL_01
+[2026-09-20 12:29:28] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-20 12:29:28] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-20 12:29:28] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: data/raw/sentinel2\S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715.tif
+[2026-09-20 12:29:28] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 64, Overlap: 16)
+[2026-09-20 12:29:37] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: outputs/sr/REAL_SR_product.tif
+[2026-09-20 12:29:38] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: outputs/sr/REAL_SR_uncertainty.tif
+[2026-09-20 12:29:38] [INFO] [satellite_srm.inference_pipeline.run:94] Full-Scene inference completed in 9.26s. Sub-4m product: outputs/sr/REAL_SR_product.tif
+[2026-09-20 12:52:51] [INFO] [satellite_srm.copernicus.authenticate:41] Authenticated successfully with Copernicus Data Space Ecosystem.
+[2026-09-20 12:53:18] [INFO] [satellite_srm.sentinel2.acquire_scene:55] Scene S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715 already exists at data/raw/sentinel2\S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715.tif
+[2026-09-20 12:53:18] [INFO] [satellite_srm.patches.extract_pairs:97] Extracted 1 patch pairs for scene S2A_MSIL2A_TEST_REAL_DL_01
+[2026-09-20 12:53:18] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-20 12:53:18] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-20 12:53:18] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: data/raw/sentinel2\S2A_MSIL2A_20260827T100701_N0512_R022_T33UUU_20260827T183715.tif
+[2026-09-20 12:53:18] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 64, Overlap: 16)
+[2026-09-20 12:53:27] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: outputs/sr/REAL_SR_product.tif
+[2026-09-20 12:53:27] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: outputs/sr/REAL_SR_uncertainty.tif
+[2026-09-20 12:53:27] [INFO] [satellite_srm.inference_pipeline.run:94] Full-Scene inference completed in 9.18s. Sub-4m product: outputs/sr/REAL_SR_product.tif
+[2026-09-20 16:04:45] [INFO] [satellite_srm.copernicus.authenticate:41] Authenticated successfully with Copernicus Data Space Ecosystem.
+[2026-09-20 16:04:57] [INFO] [satellite_srm.sentinel2.acquire_scene:59] Downloading real scene S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317...
+[2026-09-20 16:04:57] [INFO] [satellite_srm.copernicus.download_product:93] Initiating download for product 1003578e-2652-4525-b40a-277d830c3285...
+[2026-09-20 16:23:19] [ERROR] [satellite_srm.copernicus.download_product:102] Failed to download product 1003578e-2652-4525-b40a-277d830c3285: HTTPSConnectionPool(host='zipper.dataspace.copernicus.eu', port=443): Read timed out.
+[2026-09-20 16:35:53] [INFO] [satellite_srm.copernicus.authenticate:41] Authenticated successfully with Copernicus Data Space Ecosystem.
+[2026-09-20 16:37:12] [INFO] [satellite_srm.copernicus.authenticate:41] Authenticated successfully with Copernicus Data Space Ecosystem.
+[2026-09-20 16:37:12] [INFO] [satellite_srm.sentinel2.acquire_scene:60] Searching Copernicus catalogue for bbox [75.1, 30.2, 75.6, 30.7] ...
+[2026-09-20 16:37:25] [INFO] [satellite_srm.sentinel2.acquire_scene:79] Downloading real scene S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317 (may take several minutes)...
+[2026-09-20 16:37:25] [INFO] [satellite_srm.copernicus.download_product:93] Initiating download for product 1003578e-2652-4525-b40a-277d830c3285...
+[2026-09-20 16:46:23] [ERROR] [satellite_srm.copernicus.download_product:102] Failed to download product 1003578e-2652-4525-b40a-277d830c3285: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[2026-09-20 16:47:15] [INFO] [satellite_srm.copernicus.authenticate:41] Authenticated successfully with Copernicus Data Space Ecosystem.
+[2026-09-20 16:47:15] [INFO] [satellite_srm.sentinel2.acquire_scene:60] Searching Copernicus catalogue for bbox [75.1, 30.2, 75.6, 30.7] ...
+[2026-09-20 16:47:28] [INFO] [satellite_srm.sentinel2.acquire_scene:79] Downloading real scene S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317 (may take several minutes)...
+[2026-09-20 16:47:28] [INFO] [satellite_srm.copernicus.download_product:104] Initiating download for product 1003578e-2652-4525-b40a-277d830c3285 (attempt 1/5)...
+[2026-09-20 16:47:58] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 55 MB / 1157 MB (4.7%)
+[2026-09-20 16:48:20] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 105 MB / 1157 MB (9.1%)
+[2026-09-20 16:48:41] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 159 MB / 1157 MB (13.8%)
+[2026-09-20 16:48:59] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 210 MB / 1157 MB (18.1%)
+[2026-09-20 16:49:28] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 264 MB / 1157 MB (22.8%)
+[2026-09-20 16:49:51] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 315 MB / 1157 MB (27.2%)
+[2026-09-20 16:50:14] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 369 MB / 1157 MB (31.9%)
+[2026-09-20 16:50:34] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 419 MB / 1157 MB (36.3%)
+[2026-09-20 16:50:59] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 474 MB / 1157 MB (41.0%)
+[2026-09-20 16:51:14] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 524 MB / 1157 MB (45.3%)
+[2026-09-20 16:51:24] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 579 MB / 1157 MB (50.0%)
+[2026-09-20 16:51:32] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 629 MB / 1157 MB (54.4%)
+[2026-09-20 16:51:41] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 684 MB / 1157 MB (59.1%)
+[2026-09-20 16:51:49] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 734 MB / 1157 MB (63.4%)
+[2026-09-20 16:52:08] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 789 MB / 1157 MB (68.2%)
+[2026-09-20 16:52:21] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 839 MB / 1157 MB (72.5%)
+[2026-09-20 16:53:02] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 893 MB / 1157 MB (77.2%)
+[2026-09-20 16:54:11] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 944 MB / 1157 MB (81.6%)
+[2026-09-20 16:54:33] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 998 MB / 1157 MB (86.3%)
+[2026-09-20 16:54:55] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 1049 MB / 1157 MB (90.6%)
+[2026-09-20 16:55:28] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 1103 MB / 1157 MB (95.3%)
+[2026-09-20 16:55:53] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 1153 MB / 1157 MB (99.7%)
+[2026-09-20 16:55:55] [INFO] [satellite_srm.copernicus.download_product:128]   Downloaded 1157 MB / 1157 MB (100.0%)
+[2026-09-20 16:55:55] [INFO] [satellite_srm.copernicus.download_product:130] Successfully downloaded product 1003578e-2652-4525-b40a-277d830c3285 to C:\Users\vemul\OneDrive\Desktop\sih\Satellite_SRM_DL\data\raw\sentinel2\S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317.zip
+[2026-09-20 16:55:55] [INFO] [satellite_srm.sentinel2.acquire_scene:90] Extracting and processing bands from SAFE archive...
+[2026-09-20 16:59:59] [INFO] [satellite_srm.geotiff.write_geotiff:118] GeoTIFF written via rasterio to: C:\Users\vemul\OneDrive\Desktop\sih\Satellite_SRM_DL\data\raw\sentinel2\S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317.tif
+[2026-09-20 16:59:59] [INFO] [satellite_srm.sentinel2.acquire_scene:157] Scene saved: C:\Users\vemul\OneDrive\Desktop\sih\Satellite_SRM_DL\data\raw\sentinel2\S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317.tif  (SHA-256: 729c9520940a...)
+[2026-09-20 17:00:00] [INFO] [satellite_srm.sentinel2.acquire_scene:163] Cleaned up archive: C:\Users\vemul\OneDrive\Desktop\sih\Satellite_SRM_DL\data\raw\sentinel2\S2B_MSIL2A_20260918T053639_N0512_R005_T43REP_20260918T092317.zip
+[2026-09-22 20:44:13] [WARNING] [satellite_srm.copernicus.authenticate:44] Authentication failed: HTTP 401 - {"error":"invalid_grant","error_description":"Invalid user credentials"}
+[2026-09-22 20:54:35] [WARNING] [satellite_srm.copernicus.authenticate:44] Authentication failed: HTTP 401 - {"error":"invalid_grant","error_description":"Invalid user credentials"}
+[2026-09-22 20:58:20] [WARNING] [satellite_srm.copernicus.authenticate:44] Authentication failed: HTTP 401 - {"error":"invalid_grant","error_description":"Invalid user credentials"}
+[2026-09-22 21:41:14] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-22 21:41:14] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-22 21:41:26] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-22 21:41:28] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-22 21:41:28] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-22 21:43:34] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-22 21:43:34] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-22 21:43:46] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-22 21:43:48] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-22 21:43:48] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-22 21:43:48] [INFO] [satellite_srm.trainer.__init__:41] Using device: <satellite_srm.compat.Device object at 0x00000180883868D0>
+[2026-09-22 21:43:48] [INFO] [satellite_srm.trainer.fit:123] Starting SRM Training for 50 epochs...
+[2026-09-22 21:47:18] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-22 21:47:19] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-22 21:47:31] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-22 21:47:34] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-22 21:47:34] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-22 21:47:34] [INFO] [satellite_srm.trainer.__init__:41] Using device: <satellite_srm.compat.Device object at 0x0000026B14C868D0>
+[2026-09-22 21:47:34] [INFO] [satellite_srm.trainer.fit:123] Starting SRM Training for 50 epochs...
+[2026-09-22 21:49:20] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 1)
+[2026-09-22 21:49:20] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_1.pt (Epoch 1)
+[2026-09-22 21:49:21] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\best.pt (Epoch 1)
+[2026-09-22 21:49:21] [INFO] [satellite_srm.checkpoint_manager.save_epoch:25] *** New best checkpoint saved to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\best.pt (Metric: {'train_loss': 20.28350620474666, 'val_psnr': 30.0, 'val_ssim': 0.85, 'epoch': 1, 'time': 106.18093466758728}) ***
+[2026-09-22 21:49:21] [INFO] [satellite_srm.trainer.fit:143] Epoch [1/50] (106.2s) - Train Loss: 20.2835 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 21:51:09] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 2)
+[2026-09-22 21:51:09] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_2.pt (Epoch 2)
+[2026-09-22 21:51:09] [INFO] [satellite_srm.trainer.fit:143] Epoch [2/50] (108.9s) - Train Loss: 20.2549 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 21:52:57] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 3)
+[2026-09-22 21:52:57] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_3.pt (Epoch 3)
+[2026-09-22 21:52:57] [INFO] [satellite_srm.trainer.fit:143] Epoch [3/50] (107.9s) - Train Loss: 20.2326 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 21:54:37] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 4)
+[2026-09-22 21:54:37] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_4.pt (Epoch 4)
+[2026-09-22 21:54:37] [INFO] [satellite_srm.trainer.fit:143] Epoch [4/50] (99.6s) - Train Loss: 20.2782 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 21:56:43] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 5)
+[2026-09-22 21:56:43] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_5.pt (Epoch 5)
+[2026-09-22 21:56:43] [INFO] [satellite_srm.trainer.fit:143] Epoch [5/50] (125.6s) - Train Loss: 20.2683 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 21:58:51] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 6)
+[2026-09-22 21:58:51] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_6.pt (Epoch 6)
+[2026-09-22 21:58:51] [INFO] [satellite_srm.trainer.fit:143] Epoch [6/50] (128.6s) - Train Loss: 20.3932 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 22:00:37] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 7)
+[2026-09-22 22:00:37] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_7.pt (Epoch 7)
+[2026-09-22 22:00:37] [INFO] [satellite_srm.trainer.fit:143] Epoch [7/50] (105.6s) - Train Loss: 20.2548 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 22:02:28] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 8)
+[2026-09-22 22:02:28] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_8.pt (Epoch 8)
+[2026-09-22 22:02:28] [INFO] [satellite_srm.trainer.fit:143] Epoch [8/50] (110.5s) - Train Loss: 20.2518 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 22:04:09] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 9)
+[2026-09-22 22:04:09] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_9.pt (Epoch 9)
+[2026-09-22 22:04:09] [INFO] [satellite_srm.trainer.fit:143] Epoch [9/50] (101.7s) - Train Loss: 20.2461 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 22:06:03] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 10)
+[2026-09-22 22:06:03] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_10.pt (Epoch 10)
+[2026-09-22 22:06:03] [INFO] [satellite_srm.trainer.fit:143] Epoch [10/50] (113.6s) - Train Loss: 20.2848 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 22:07:42] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 11)
+[2026-09-22 22:07:42] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_11.pt (Epoch 11)
+[2026-09-22 22:07:42] [INFO] [satellite_srm.trainer.fit:143] Epoch [11/50] (98.7s) - Train Loss: 20.2696 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-22 22:07:42] [INFO] [satellite_srm.trainer.fit:151] Early stopping triggered at epoch 11.
+[2026-09-22 22:07:42] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-22 22:07:42] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-22 22:07:42] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 58 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 06:32:54] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 06:32:55] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 06:33:08] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 06:33:11] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 06:33:11] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 06:33:11] [INFO] [satellite_srm.trainer.__init__:41] Using device: <satellite_srm.compat.Device object at 0x000001C464DEE990>
+[2026-09-23 06:33:11] [INFO] [satellite_srm.trainer.fit:123] Starting SRM Training for 50 epochs...
+[2026-09-23 06:35:58] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 1)
+[2026-09-23 06:35:58] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_1.pt (Epoch 1)
+[2026-09-23 06:35:58] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\best.pt (Epoch 1)
+[2026-09-23 06:35:58] [INFO] [satellite_srm.checkpoint_manager.save_epoch:25] *** New best checkpoint saved to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\best.pt (Metric: {'train_loss': 20.231341272592545, 'val_psnr': 30.0, 'val_ssim': 0.85, 'epoch': 1, 'time': 167.2310152053833}) ***
+[2026-09-23 06:35:58] [INFO] [satellite_srm.trainer.fit:143] Epoch [1/50] (167.2s) - Train Loss: 20.2313 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:38:47] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 2)
+[2026-09-23 06:38:47] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_2.pt (Epoch 2)
+[2026-09-23 06:38:47] [INFO] [satellite_srm.trainer.fit:143] Epoch [2/50] (168.8s) - Train Loss: 20.2971 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:40:55] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 3)
+[2026-09-23 06:40:55] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_3.pt (Epoch 3)
+[2026-09-23 06:40:55] [INFO] [satellite_srm.trainer.fit:143] Epoch [3/50] (128.1s) - Train Loss: 20.2485 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:43:05] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 4)
+[2026-09-23 06:43:05] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_4.pt (Epoch 4)
+[2026-09-23 06:43:05] [INFO] [satellite_srm.trainer.fit:143] Epoch [4/50] (129.3s) - Train Loss: 20.3074 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:45:09] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 5)
+[2026-09-23 06:45:09] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_5.pt (Epoch 5)
+[2026-09-23 06:45:09] [INFO] [satellite_srm.trainer.fit:143] Epoch [5/50] (124.4s) - Train Loss: 20.2425 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:47:10] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 6)
+[2026-09-23 06:47:10] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_6.pt (Epoch 6)
+[2026-09-23 06:47:10] [INFO] [satellite_srm.trainer.fit:143] Epoch [6/50] (120.9s) - Train Loss: 20.2060 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:49:10] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 7)
+[2026-09-23 06:49:10] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_7.pt (Epoch 7)
+[2026-09-23 06:49:10] [INFO] [satellite_srm.trainer.fit:143] Epoch [7/50] (120.0s) - Train Loss: 20.3076 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:51:12] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 8)
+[2026-09-23 06:51:13] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_8.pt (Epoch 8)
+[2026-09-23 06:51:13] [INFO] [satellite_srm.trainer.fit:143] Epoch [8/50] (122.5s) - Train Loss: 20.2713 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:53:16] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 9)
+[2026-09-23 06:53:16] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_9.pt (Epoch 9)
+[2026-09-23 06:53:16] [INFO] [satellite_srm.trainer.fit:143] Epoch [9/50] (123.3s) - Train Loss: 20.2211 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:55:19] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 10)
+[2026-09-23 06:55:19] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_10.pt (Epoch 10)
+[2026-09-23 06:55:19] [INFO] [satellite_srm.trainer.fit:143] Epoch [10/50] (122.9s) - Train Loss: 20.2887 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:57:22] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 11)
+[2026-09-23 06:57:22] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_11.pt (Epoch 11)
+[2026-09-23 06:57:22] [INFO] [satellite_srm.trainer.fit:143] Epoch [11/50] (123.1s) - Train Loss: 20.5313 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 06:57:22] [INFO] [satellite_srm.trainer.fit:151] Early stopping triggered at epoch 11.
+[2026-09-23 06:57:22] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 06:57:22] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 06:57:22] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 58 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 09:14:36] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 09:15:05] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 09:15:19] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 09:15:51] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 09:15:51] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 09:15:51] [INFO] [satellite_srm.trainer.__init__:41] Using device: <satellite_srm.compat.Device object at 0x0000027528F9E990>
+[2026-09-23 09:15:51] [INFO] [satellite_srm.trainer.fit:123] Starting SRM Training for 50 epochs...
+[2026-09-23 09:33:51] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 09:34:14] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 09:34:23] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 09:34:48] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 09:34:49] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 09:34:49] [INFO] [satellite_srm.trainer.__init__:41] Using device: cpu
+[2026-09-23 09:35:07] [INFO] [satellite_srm.trainer.fit:123] Starting SRM Training for 50 epochs...
+[2026-09-23 14:27:00] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 14:27:21] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 14:27:31] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 14:27:54] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 14:27:54] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 14:27:54] [INFO] [satellite_srm.trainer.__init__:41] Using device: cpu
+[2026-09-23 14:28:01] [INFO] [satellite_srm.trainer.fit:126] Starting SRM Training for 5 epochs...
+[2026-09-23 14:32:18] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 14:32:38] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 14:32:48] [INFO] [satellite_srm.sentinel2.acquire_scene:49] Cache hit – scene already exists at C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 14:33:11] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 14:33:12] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 14:33:12] [INFO] [satellite_srm.trainer.__init__:41] Using device: cpu
+[2026-09-23 14:33:20] [INFO] [satellite_srm.trainer.fit:132] Starting SRM Training for 5 epochs...
+[2026-09-23 14:33:20] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 0 start forward pass
+[2026-09-23 14:33:24] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 0 start backward pass
+[2026-09-23 14:33:29] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 0 done
+[2026-09-23 14:33:29] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 1 start forward pass
+[2026-09-23 14:33:32] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 1 start backward pass
+[2026-09-23 14:33:36] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 1 done
+[2026-09-23 14:33:36] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 2 start forward pass
+[2026-09-23 14:33:38] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 2 start backward pass
+[2026-09-23 14:33:42] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 2 done
+[2026-09-23 14:38:34] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 1 - Batch 50/201 - Loss: 67.4050
+[2026-09-23 14:43:37] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 1 - Batch 100/201 - Loss: 68.5027
+[2026-09-23 14:49:01] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 1 - Batch 150/201 - Loss: 46.8717
+[2026-09-23 14:54:47] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 1 - Batch 200/201 - Loss: 36.7777
+[2026-09-23 14:54:55] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 1 - Batch 201/201 - Loss: 36.6345
+[2026-09-23 14:54:55] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 1)
+[2026-09-23 14:54:55] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_1.pt (Epoch 1)
+[2026-09-23 14:54:55] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\best.pt (Epoch 1)
+[2026-09-23 14:54:55] [INFO] [satellite_srm.checkpoint_manager.save_epoch:25] *** New best checkpoint saved to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\best.pt (Metric: {'train_loss': 36.63450105036076, 'val_psnr': 30.0, 'val_ssim': 0.85, 'epoch': 1, 'time': 1294.698767900467}) ***
+[2026-09-23 14:54:55] [INFO] [satellite_srm.trainer.fit:152] Epoch [1/5] (1294.7s) - Train Loss: 36.6345 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 14:54:55] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 0 start forward pass
+[2026-09-23 14:54:59] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 0 start backward pass
+[2026-09-23 14:55:03] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 0 done
+[2026-09-23 14:55:03] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 1 start forward pass
+[2026-09-23 14:55:05] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 1 start backward pass
+[2026-09-23 14:55:09] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 1 done
+[2026-09-23 14:55:09] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 2 start forward pass
+[2026-09-23 14:55:11] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 2 start backward pass
+[2026-09-23 14:55:14] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 2 done
+[2026-09-23 15:00:08] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 2 - Batch 50/201 - Loss: 68.3482
+[2026-09-23 15:05:21] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 2 - Batch 100/201 - Loss: 69.0126
+[2026-09-23 15:10:34] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 2 - Batch 150/201 - Loss: 47.2024
+[2026-09-23 15:15:48] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 2 - Batch 200/201 - Loss: 37.0106
+[2026-09-23 15:15:54] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 2 - Batch 201/201 - Loss: 36.8659
+[2026-09-23 15:15:54] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 2)
+[2026-09-23 15:15:54] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_2.pt (Epoch 2)
+[2026-09-23 15:15:54] [INFO] [satellite_srm.trainer.fit:152] Epoch [2/5] (1258.3s) - Train Loss: 36.8659 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 15:15:54] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 0 start forward pass
+[2026-09-23 15:15:56] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 0 start backward pass
+[2026-09-23 15:16:00] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 0 done
+[2026-09-23 15:16:00] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 1 start forward pass
+[2026-09-23 15:16:03] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 1 start backward pass
+[2026-09-23 15:16:07] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 1 done
+[2026-09-23 15:16:07] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 2 start forward pass
+[2026-09-23 15:16:11] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 2 start backward pass
+[2026-09-23 15:16:15] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 2 done
+[2026-09-23 15:21:12] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 3 - Batch 50/201 - Loss: 68.2929
+[2026-09-23 15:26:29] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 3 - Batch 100/201 - Loss: 68.9530
+[2026-09-23 15:31:52] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 3 - Batch 150/201 - Loss: 47.1483
+[2026-09-23 15:37:06] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 3 - Batch 200/201 - Loss: 36.9707
+[2026-09-23 15:37:14] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 3 - Batch 201/201 - Loss: 36.8263
+[2026-09-23 15:37:14] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 3)
+[2026-09-23 15:37:14] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_3.pt (Epoch 3)
+[2026-09-23 15:37:14] [INFO] [satellite_srm.trainer.fit:152] Epoch [3/5] (1279.8s) - Train Loss: 36.8263 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 15:37:14] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 0 start forward pass
+[2026-09-23 15:37:17] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 0 start backward pass
+[2026-09-23 15:37:21] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 0 done
+[2026-09-23 15:37:21] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 1 start forward pass
+[2026-09-23 15:37:23] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 1 start backward pass
+[2026-09-23 15:37:26] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 1 done
+[2026-09-23 15:37:26] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 2 start forward pass
+[2026-09-23 15:37:28] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 2 start backward pass
+[2026-09-23 15:37:32] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 2 done
+[2026-09-23 15:42:31] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 4 - Batch 50/201 - Loss: 68.2946
+[2026-09-23 15:47:48] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 4 - Batch 100/201 - Loss: 68.9564
+[2026-09-23 15:53:03] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 4 - Batch 150/201 - Loss: 47.1476
+[2026-09-23 16:39:18] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 4 - Batch 200/201 - Loss: 36.9672
+[2026-09-23 16:39:26] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 4 - Batch 201/201 - Loss: 36.8228
+[2026-09-23 16:39:27] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 4)
+[2026-09-23 16:39:27] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_4.pt (Epoch 4)
+[2026-09-23 16:39:27] [INFO] [satellite_srm.trainer.fit:152] Epoch [4/5] (3732.3s) - Train Loss: 36.8228 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 16:39:27] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 0 start forward pass
+[2026-09-23 16:39:30] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 0 start backward pass
+[2026-09-23 16:39:36] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 0 done
+[2026-09-23 16:39:36] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 1 start forward pass
+[2026-09-23 16:39:39] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 1 start backward pass
+[2026-09-23 16:39:43] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 1 done
+[2026-09-23 16:39:43] [INFO] [satellite_srm.trainer.train_epoch:78]     Batch 2 start forward pass
+[2026-09-23 16:39:45] [INFO] [satellite_srm.trainer.train_epoch:85]     Batch 2 start backward pass
+[2026-09-23 16:39:49] [INFO] [satellite_srm.trainer.train_epoch:90]     Batch 2 done
+[2026-09-23 16:45:29] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 5 - Batch 50/201 - Loss: 68.2841
+[2026-09-23 16:51:30] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 5 - Batch 100/201 - Loss: 68.9473
+[2026-09-23 16:57:24] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 5 - Batch 150/201 - Loss: 47.1386
+[2026-09-23 17:03:16] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 5 - Batch 200/201 - Loss: 36.9588
+[2026-09-23 17:03:22] [INFO] [satellite_srm.trainer.train_epoch:98]     Epoch 5 - Batch 201/201 - Loss: 36.8145
+[2026-09-23 17:03:23] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt (Epoch 5)
+[2026-09-23 17:03:23] [INFO] [satellite_srm.checkpoint.save_model_checkpoint:28] Saved checkpoint to C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\epoch_5.pt (Epoch 5)
+[2026-09-23 17:03:23] [INFO] [satellite_srm.trainer.fit:152] Epoch [5/5] (1435.7s) - Train Loss: 36.8145 | Val PSNR: 30.00 dB | Val SSIM: 0.8500
+[2026-09-23 17:03:23] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 17:03:23] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 17:06:52] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 17:06:53] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 17:06:53] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: c:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 17:06:58] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 2958 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 20:37:46] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 20:37:47] [INFO] [satellite_srm.checkpoint.load_checkpoint_weights:64] Successfully transferred 210 layers from C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt.
+[2026-09-23 20:37:47] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 20:37:47] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 20:37:47] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 20:58:30] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 20:58:30] [INFO] [satellite_srm.checkpoint.load_checkpoint_weights:64] Successfully transferred 210 layers from C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt.
+[2026-09-23 20:58:30] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 20:58:30] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 20:58:30] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 21:07:04] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\agriculture_sr.tif
+[2026-09-23 21:07:05] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\uncertainty\agriculture_uncertainty.tif
+[2026-09-23 21:07:05] [INFO] [satellite_srm.inference_pipeline.run:94] Full-Scene inference completed in 514.81s. Sub-4m product: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\agriculture_sr.tif
+[2026-09-23 21:07:06] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 21:07:06] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 21:15:43] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\urban_sr.tif
+[2026-09-23 21:15:44] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\uncertainty\urban_uncertainty.tif
+[2026-09-23 21:15:44] [INFO] [satellite_srm.inference_pipeline.run:94] Full-Scene inference completed in 517.71s. Sub-4m product: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\urban_sr.tif
+[2026-09-23 21:18:02] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 21:18:02] [INFO] [satellite_srm.checkpoint.load_checkpoint_weights:64] Successfully transferred 210 layers from C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt.
+[2026-09-23 21:18:02] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 21:18:04] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 21:18:04] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 21:26:36] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\disaster_sr.tif
+[2026-09-23 21:26:37] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\uncertainty\disaster_uncertainty.tif
+[2026-09-23 21:26:37] [INFO] [satellite_srm.inference_pipeline.run:94] Full-Scene inference completed in 512.89s. Sub-4m product: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\disaster_sr.tif
+[2026-09-23 21:30:39] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 21:30:39] [INFO] [satellite_srm.checkpoint.load_checkpoint_weights:64] Successfully transferred 210 layers from C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt.
+[2026-09-23 21:30:39] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 22:33:44] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 22:41:29] [INFO] [satellite_srm.model_factory.create_model:26] Initializing Multispectral SwinIR model (Scale: 3.0x, 4 bands)...
+[2026-09-23 22:41:29] [INFO] [satellite_srm.checkpoint.load_checkpoint_weights:64] Successfully transferred 210 layers from C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\checkpoints\latest.pt.
+[2026-09-23 22:41:29] [INFO] [satellite_srm.device.select_device:17] Explicit CPU device selected.
+[2026-09-23 22:41:29] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_agriculture.tif
+[2026-09-23 22:41:30] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 22:52:13] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\agriculture_sr.tif
+[2026-09-23 22:52:14] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\uncertainty\agriculture_uncertainty.tif
+[2026-09-23 22:52:14] [INFO] [satellite_srm.inference_pipeline.run:101] Full-Scene inference completed in 644.20s. Sub-4m product: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\agriculture_sr.tif
+[2026-09-23 22:52:14] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_urban.tif
+[2026-09-23 22:52:14] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 23:02:02] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\urban_sr.tif
+[2026-09-23 23:02:03] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\uncertainty\urban_uncertainty.tif
+[2026-09-23 23:02:03] [INFO] [satellite_srm.inference_pipeline.run:101] Full-Scene inference completed in 588.35s. Sub-4m product: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\urban_sr.tif
+[2026-09-23 23:02:03] [INFO] [satellite_srm.inference_pipeline.run:40] Starting Full-Scene SRM Inference on: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\data\raw\sentinel2\srm_disaster.tif
+[2026-09-23 23:02:03] [INFO] [satellite_srm.inference_pipeline.run:53] Decomposed scene into 36 overlapping tiles (Tile: 128, Overlap: 32)
+[2026-09-23 23:11:43] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\disaster_sr.tif
+[2026-09-23 23:11:43] [INFO] [satellite_srm.geotiff.write_geotiff:128] GeoTIFF written via rasterio to: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\uncertainty\disaster_uncertainty.tif
+[2026-09-23 23:11:43] [INFO] [satellite_srm.inference_pipeline.run:101] Full-Scene inference completed in 579.92s. Sub-4m product: C:\Users\mouni\OneDrive\Documents\sih 142\backend\Satellite_SRM_DL\outputs\sr\disaster_sr.tif
